@@ -25,9 +25,6 @@ data = pandas.read_csv('pro-who-tweets.csv')
 tweets = data['content'].tolist()
 print('List length: ' + str(len(tweets)))
 
-#NW setting entire list to lowercase so that it is easier on the regex
-for i in range(len(tweets)):
-  tweets[i] = tweets[i].lower()
 
 # === Part 1: Filtering ===
 
@@ -55,28 +52,14 @@ for i in range(len(tweets)):
 # -- Fourth filter: -- Remove tweets where the pronoun 'it' preceeds the word 'who' by 2-4 words
 # -- Suggested approach: -- Write a regular expression that picks out this pattern. Using the list you generated from the previous filter, use create a loop with a conditional statement that removes this pattern. Print the length of the list.
 
-regex = r"it\s+((?:\w+(?:\s+|$)){1,3}who)"
 
-for tweet in list(tweets):
-  if(re.match(regex, tweet)):
-    tweets.remove(tweet)
 
-print("List length where the pronoun 'it' preceeds the word 'who' by 2 - 4 words is removed:",len(tweets))
+
 
 # -- Fifth filter: -- Remove tweets where 'PRO who' is preceded by the verbs 'ask', 'tell', 'wonder', 'inform', and 'show'.
 # -- Suggested approach: --  Save the verbs above into a list. Create a loop that iterates through your pronoun list from above, and removes examples that contain the pattern '[element-from-verb-list] [element-from-PRO-list]'. Print the length of the list.
 
-proList = ['he who', 'she who', 'it who', 'him who', 'her who', 'they who', 'them who', 'we who', 'us who', 'you who']
 
-verbsList = ["ask", "tell", "wonder", "inform", "show"]
-
-for tweet in list(tweets):
-  for pro in proList:
-    for verb in verbsList:
-      if (pro + " " + verb) in tweet:
-        tweets.remove(tweet)
-
-print("Length of List with removing tweets with 'PRO who':",len(tweets))
 
 
 # output your list as a .csv or .tsv file.
