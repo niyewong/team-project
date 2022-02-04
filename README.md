@@ -10,6 +10,7 @@ This folder currently contains 6 files:
  4. **filter-by-regex.py**, a .py file containing descriptions of the patterns that students should use to filter out irrelevant examples from **pro-who-tweets.csv**
  5. **filter-by-regex(ver1).py**, updated version of (4) containing the code for the pre-processing section.
  6. **filter-by-regex(ver2).py**, updated version of (5) containing the code for the first and second filters in the filtering section.
+ 7. **filter-by-regex(ver3).py**, updated version of (5) containing the code for the fourth and fifth filters in the filtering section.
 
 ### Overview of data in _pro-who-tweets.csv_
 
