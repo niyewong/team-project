@@ -71,13 +71,11 @@ print('3rd filter list length:', len(noOfWho))
 
 noItWho = []
 
-regex = r"it\s+((?:\w+(?:\s+|$)){1,3}who)"
-
-for tweet in list(noOfWho):
-  if(re.match(regex, tweet)):
-    noOfWho.remove(tweet)
-
-noItWho = noOfWho
+for tweet in noOfWho:
+  if re.search(r'it ([\s]*\b([^\s]+)\b[\s]*){2,4} who', tweet):
+    continue
+  else:
+    noItWho.append(tweet)
 
 print("4th filter list length:",len(noItWho))
 
@@ -86,14 +84,12 @@ print("4th filter list length:",len(noItWho))
 
 noProWho = []
 
-proList = ['he who', 'she who', 'it who', 'him who', 'her who', 'they who', 'them who', 'we who', 'us who', 'you who']
-
 verbsList = ["ask", "tell", "wonder", "inform", "show"]
 
-for tweet in list(noItWho):
-  for pro in proList:
-    for verb in verbsList:
-      if (pro + " " + verb) in tweet:
+for tweet in noItWho[::-1]:
+  for verb in verbsList:
+    for pn in pronoun:
+      if re.search(rf'{verb} {pn} who', tweet):
         noItWho.remove(tweet)
 
 noProWho = noItWho
