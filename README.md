@@ -11,6 +11,8 @@ This folder currently contains 6 files:
  5. **filter-by-regex(ver1).py**, updated version of (4) containing the code for the pre-processing section.
  6. **filter-by-regex(ver2).py**, updated version of (5) containing the code for the first and second filters in the filtering section.
  7. **filter-by-regex(ver3).py**, updated version of (5) containing the code for the fourth and fifth filters in the filtering section.
+ 8. **literary-annotated-tweets.csv**, a file containing valid tweets from (3) and are tagged as literary or non-literary.
+ 9. **sample-annotated-tweets.csv**, a file containing a sample of 150 tweets from (8), where relative clauses are tagged with RC-type, RC-head, and Role.
 
 ### Overview of data in _pro-who-tweets.csv_
 
