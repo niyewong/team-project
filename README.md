@@ -2,7 +2,7 @@
 
 Team Members: Owen Fisher, Kasey La, Nicole Wong
 
-This folder currently contains 8 files:
+This folder currently contains 7 files:
 
  1. this **README** file
  2. **scrapeTweets.py**, a script that was used to scrape data from Twitter of the pattern _PRONOUN who_ from tweets posted on 22 September, 2021. 
