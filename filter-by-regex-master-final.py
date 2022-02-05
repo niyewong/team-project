@@ -1,8 +1,8 @@
 # Initiated by Kelsey Kraus
 #
-# Contributors: <UPDATE ME!> 
+# Contributors: Owen Fisher, Kasey La, Nicole Wong
 #
-# Description: <UPDATE ME!> This file currently contains the instructions for replicating the data cleaning method implemented by CTK 2016.
+# Description: This file is a replication of the data cleaning method implemented by CTK 2016.
 
 # NOTE: the suggested approaches below are NOT the only way to complete this task! It is merely given as a starting point. You can choose to do this in a different way if you want, but be sure to comment on your process along the way.
 
