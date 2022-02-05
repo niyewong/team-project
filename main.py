@@ -1,8 +1,8 @@
 # Initiated by Kelsey Kraus
 #
-# Contributors: <UPDATE ME!> 
+# Contributors: Owen Fisher, Kasey La, Nicole Wong 
 #
-# Description: <UPDATE ME!> This file currently contains the instructions for replicating the data cleaning method implemented by CTK 2016.
+# Description: This file is a replication of the data cleaning method implemented by CTK 2016.
 
 # NOTE: the suggested approaches below are NOT the only way to complete this task! It is merely given as a starting point. You can choose to do this in a different way if you want, but be sure to comment on your process along the way.
 
@@ -56,14 +56,13 @@ print('2nd filter list length:', str(len(alphaWho)))
 
 noOfWho = []
 
-ofList = ['of he who', 'of she who', 'of it who', 'of him who', 'of her who', 'of they who', 'of them who', 'of we who', 'of us who', 'of you who']
-
 for tweet in alphaWho:
-  for str in ofList:
-    if (str) in tweet:
-      alphaWho.remove(tweet)
-
-noOfWho = alphaWho
+  count = 0
+  for pn in pronoun:
+    if re.search(rf'of {pn} who', tweet):
+      count += 1
+  if count == 0:
+    noOfWho.append(tweet)
 
 print('3rd filter list length:', len(noOfWho))
 
@@ -125,7 +124,7 @@ for tweet in noProWho:
       trueFalseList.append(False)
   else:
       trueFalseList.append(any(whoPhrase.group(0) in t for t in noProWho))
-print(trueFalseList)
+#print(trueFalseList)
 
 # The following takes our two lists, tweetList and trueFalseList, and zips them together. It then creates a dataframe out of this list, that can then be converted to a .csv file
 
