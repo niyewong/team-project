@@ -2,14 +2,16 @@
 
 Team Members: Owen Fisher, Kasey La, Nicole Wong
 
-This folder currently contains 6 files:
+This folder currently contains 7 files and 1 folder:
 
  1. this **README** file
  2. **scrapeTweets.py**, a script that was used to scrape data from Twitter of the pattern _PRONOUN who_ from tweets posted on 22 September, 2021. 
  3. **pro-who-tweets.csv**, a file containing the tweets that were scraped, gathered on 08 January 2022.
  4. **filter-by-regex.py**, a .py file containing descriptions of the patterns that students should use to filter out irrelevant examples from **pro-who-tweets.csv**
- 5. **filter-by-regex(ver1).py**, updated version of (4) containing the code for the pre-processing section.
- 6. **filter-by-regex(ver2).py**, updated version of (5) containing the code for the first and second filters in the filtering section.
+ 5. **literary-annotated-tweets.csv**, a file containing valid tweets from (3) and are tagged as literary or non-literary.
+ 6. **sample-annotated-tweets.csv**, a file containing a sample of 150 tweets from (5), where relative clauses are tagged with RC-type, RC-head, and Role.
+ 7. **CTK-Replication-Findings.pdf**, a short description of our findings.
+ 8. **ProjectProposals**, a folder containing a .pdf file with our project proposals.
 
 ### Overview of data in _pro-who-tweets.csv_
 
